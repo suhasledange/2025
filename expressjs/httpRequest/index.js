@@ -36,6 +36,15 @@ app.delete('/user/:id',(req,res)=>{
     })
 })
 
+app.get('/things/:name/:id',(req,res)=>{
+    const {name,id} = req.params;
+
+    res.json({
+        id,
+        name
+    })
+})
+
 app.listen(3000,()=>{
     console.log("running")
 })
